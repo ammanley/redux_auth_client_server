@@ -1,6 +1,7 @@
 from flask import Blueprint, abort, request
 from flask_restful import Api, Resource, reqparse, marshal_with, fields
 from project.models import Puppy, User
+from flask_jwt import current_identity
 from project import db
 import jwt
 from functools import wraps
