@@ -79,6 +79,7 @@ class PuppyAPI(Resource):
     @jwt_required
     @marshal_with(puppy_fields)
     def get(self, user_id, id):
+        from IPython import embed; embed()
         return Puppy.query.get_or_404(id)
 
     @jwt_required

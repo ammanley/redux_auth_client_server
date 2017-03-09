@@ -93,7 +93,7 @@ class usersAPI(Resource):
         parser.add_argument('username', type=str, help='username')
         parser.add_argument('password', type=str, help='password')
         args = parser.parse_args()
-        from IPython import embed; embed()
+
         try:
             new_user = User(args['username'], args['password'])
             db.session.add(new_user)
